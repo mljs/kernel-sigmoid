@@ -4,13 +4,13 @@
   "description": "Sigmoid (hyperbolic tangent) kernel",
   "main": "./sigmoid-kernel.js",
   "files": [
-    "src"
+    "sigmoid-kernel.js"
   ],
   "scripts": {
-    "eslint": "eslint sigmoid-kernel.js test",
+    "eslint": "eslint sigmoid-kernel.js __tests__",
     "eslint-fix": "npm run eslint -- --fix",
-    "test": "npm run test-mocha && npm run eslint",
-    "test-mocha": "mocha --require should --reporter mocha-better-spec-reporter"
+    "test": "npm run test-only && npm run eslint",
+    "test-only": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
     "learning",
     "data",
     "mining",
-    "datamining"
+    "datamining",
+    "kernel",
+    "sigmoid"
   ],
   "author": "Michaël Zasso <targos@protonmail.com>",
   "license": "MIT",
@@ -30,11 +32,10 @@
   },
   "homepage": "https://github.com/mljs/kernel-sigmoid#readme",
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "eslint-config-cheminfo": "^1.1.2",
-    "eslint-plugin-no-only-tests": "^1.1.0",
-    "mocha": "^3.0.0",
-    "mocha-better-spec-reporter": "^3.0.2",
-    "should": "^11.1.1"
+    "eslint": "^6.0.1",
+    "eslint-config-cheminfo": "^1.20.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.1",
+    "jest": "^24.8.0"
   }
 }
