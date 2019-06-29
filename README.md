@@ -17,8 +17,8 @@ See http://crsouza.com/2010/03/kernel-functions-for-machine-learning-application
 
 **Options**:
 
-- `alpha` - value for the alpha factor (default: 0.01)
-- `constant` - value for the constant (default: -Math.E)
+- `alpha` - value for the alpha factor (default: 0.01).
+- `constant` - value for the constant (default: -Math.E).
 
 ### kernel.compute(x, y)
 
