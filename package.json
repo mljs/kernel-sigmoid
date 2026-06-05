@@ -2,15 +2,20 @@
   "name": "ml-kernel-sigmoid",
   "version": "1.0.1",
   "description": "Sigmoid (hyperbolic tangent) kernel",
-  "main": "./sigmoid-kernel.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
   "files": [
-    "sigmoid-kernel.js"
+    "src"
   ],
   "scripts": {
-    "eslint": "eslint sigmoid-kernel.js __tests__",
-    "eslint-fix": "npm run eslint -- --fix",
-    "test": "npm run test-only && npm run eslint",
-    "test-only": "jest"
+    "eslint": "eslint src",
+    "eslint-fix": "eslint src --fix",
+    "prettier": "prettier --check src",
+    "prettier-write": "prettier --write src",
+    "test": "npm run test-only && npm run eslint && npm run prettier",
+    "test-only": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -32,10 +37,10 @@
   },
   "homepage": "https://github.com/mljs/kernel-sigmoid#readme",
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-config-cheminfo": "^1.20.1",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.1",
-    "jest": "^24.8.0"
+    "@vitest/coverage-v8": "^4.1.8",
+    "eslint": "^9.39.4",
+    "eslint-config-cheminfo": "^18.0.0",
+    "prettier": "^3.8.3",
+    "vitest": "^4.1.8"
   }
 }
