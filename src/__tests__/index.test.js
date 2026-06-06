@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import SigmoidKernel from '../index.js';
+import { SigmoidKernel } from '../index.js';
 
 test('default options', () => {
   const kernel = new SigmoidKernel();
